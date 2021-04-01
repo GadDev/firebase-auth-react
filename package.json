@@ -53,10 +53,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "**/*.{js,ts,tsx}": [
       "eslint --quiet --fix"
     ],
-    "*.{json,md,html}": [
+    "**/*.{json,md,html}": [
       "prettier --write"
     ]
   }
