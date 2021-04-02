@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders App', () => {
   render(<App />);
-  const title = screen.getByRole('heading', { name: 'Appg' });
+  const title = screen.getByRole('heading', { name: 'App' });
   expect(title).toBeInTheDocument();
 });
