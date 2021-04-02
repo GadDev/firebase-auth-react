@@ -1,6 +1,6 @@
 const PasswordForget = () => (
   <div>
-    <h1>PasswordForget</h1>
+    <h1>PasswordForget dffgf</h1>
   </div>
 );
 
