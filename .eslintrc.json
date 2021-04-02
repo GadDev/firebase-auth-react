@@ -6,10 +6,14 @@
   },
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:jsx-a11y/strict",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/strict"
+    "plugin:testing-library/recommended",
+    "plugin:testing-library/react",
+    "react-app/jest"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -18,14 +22,27 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y"],
+  "plugins": ["react", "jsx-a11y", "simple-import-sort", "testing-library"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
+    "brace-style": "error",
     "import/prefer-default-export": "off",
-    "space-before-blocks": "error",
-    "react-hooks/exhaustive-deps": "error",
+    "jest-dom/prefer-checked": "error",
+    "jest-dom/prefer-enabled-disabled": "error",
+    "jest-dom/prefer-required": "error",
+    "jest-dom/prefer-to-have-attribute": "error",
     "no-var": "error",
-    "brace-style": "error"
+    "prettier/prettier": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-curly-newline": "off",
+    "react-hooks/exhaustive-deps": "error",
+    "react/prop-types": ["off"],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "space-before-blocks": "error",
+    "testing-library/await-async-query": "error",
+    "testing-library/no-await-sync-query": "error",
+    "testing-library/no-debug": "warn"
   },
   "overrides": [
     {

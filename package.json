@@ -40,20 +40,22 @@
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-jest-dom": "^3.7.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-testing-library": "^3.10.2",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --quiet --fix"
     ],
-    "*.{json,md,html}": [
-      "prettier --write"
-    ]
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   }
 }
