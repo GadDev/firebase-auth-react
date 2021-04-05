@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+import { compose } from 'recompose';
 
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
@@ -31,7 +32,8 @@ class SignUpFormBase extends Component {
   }
 
   onChange(event) {
-    return this.setState({ [event.target.name]: event.target.value });
+    console.log(event);
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   render() {
@@ -42,32 +44,32 @@ class SignUpFormBase extends Component {
       email === '' ||
       username === '';
     return (
-      <form onSubmit={this.onSubmit}>
+      <form onSubmit={(e) => this.onSubmit(e)}>
         <input
           name="username"
           value={username}
-          onChange={this.onChange}
+          onChange={(e) => this.onChange(e)}
           type="text"
           placeholder="Full Name"
         />
         <input
           name="email"
           value={email}
-          onChange={this.onChange}
+          onChange={(e) => this.onChange(e)}
           type="text"
           placeholder="Email Address"
         />
         <input
           name="passwordOne"
           value={passwordOne}
-          onChange={this.onChange}
+          onChange={(e) => this.onChange(e)}
           type="password"
           placeholder="Password"
         />
         <input
           name="passwordTwo"
           value={passwordTwo}
-          onChange={this.onChange}
+          onChange={(e) => this.onChange(e)}
           type="password"
           placeholder="Confirm Password"
         />
@@ -81,6 +83,6 @@ class SignUpFormBase extends Component {
   }
 }
 
-const SignUpForm = withRouter(withFirebase(SignUpFormBase));
+const SignUpForm = compose(withRouter, withFirebase)(SignUpFormBase);
 
 export default SignUpForm;
