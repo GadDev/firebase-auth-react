@@ -1,9 +1,12 @@
-import SignUpForm from './SignUpForm';
 // import SignUpLink from './SignUpLink';
+import { FirebaseContext } from '../Firebase';
+import SignUpForm from './SignUpForm';
 const SignUp = () => (
   <div>
     <h1>SignUp</h1>
-    <SignUpForm />
+    <FirebaseContext.Consumer>
+      {(firebase) => <SignUpForm firebase={firebase} />}
+    </FirebaseContext.Consumer>
   </div>
 );
 
