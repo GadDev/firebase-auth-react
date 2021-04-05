@@ -1,1 +1,3 @@
-export { default } from './Session';
+import AuthUserContext from './context';
+
+export { AuthUserContext };
