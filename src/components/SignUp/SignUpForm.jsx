@@ -5,7 +5,7 @@ import { compose } from 'recompose';
 
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
-import { INITIAL_STATE } from './config';
+import { INITIAL_STATE } from './initialState';
 
 class SignUpFormBase extends Component {
   constructor(props) {
