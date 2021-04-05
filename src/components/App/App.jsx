@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
+import { withFirebase } from '../Firebase';
 import HomePage from '../Home';
 import LandingPage from '../Landing';
 import Navigation from '../Navigation';
@@ -14,6 +15,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { authUser: null };
+  }
+
+  componentDidMount() {
+    this.listener = this.props.firebase.auth.onAuthStateChanged((authUser) => {
+      authUser
+        ? this.setState({ authUser })
+        : this.setState({ authUser: null });
+    });
+  }
+  componentWillUnmount() {
+    this.listener();
   }
   render() {
     const { authUser } = this.state;
@@ -36,4 +48,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withFirebase(App);
