@@ -1,4 +1,6 @@
 /* eslint-disable no-undef */
+import 'firebase/auth';
+
 import app from 'firebase/app';
 
 const config = {
@@ -13,6 +15,8 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config);
+
+    this.auth = app.auth();
   }
 }
 
