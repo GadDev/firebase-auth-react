@@ -9,11 +9,13 @@ const AuthRoute = ({ component: Component, path, exact, authUser }) => {
       history.push('/');
     }
   }, [history, authUser]);
-  return (
+
+  const renderRoute = authUser ? (
     <Route path={path} exact={exact}>
       <Component />
     </Route>
-  );
+  ) : null;
+  return renderRoute;
 };
 
 const AuthenticatedRoute = ({ component, path, exact }) => (
