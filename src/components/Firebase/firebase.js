@@ -22,11 +22,14 @@ class Firebase {
   // *** Auth API ***
 
   doCreateUserWithEmailAndPassword(email, password) {
-    this.auth.createUserWithEmailAndPassword(email, password);
+    return this.auth.createUserWithEmailAndPassword(email, password);
   }
 
   doSignInWithEmailAndPassword(email, password) {
-    this.auth.signInWithEmailAndPassword(email, password);
+    return this.auth.signInWithEmailAndPassword(email, password);
+  }
+  doSignOut() {
+    return this.auth.signOut();
   }
 }
 
