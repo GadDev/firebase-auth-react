@@ -31,6 +31,10 @@ class Firebase {
   doSignOut() {
     return this.auth.signOut();
   }
+
+  doPasswordReset(email) {
+    return this.auth.sendPasswordResetEmail(email);
+  }
 }
 
 export default Firebase;
