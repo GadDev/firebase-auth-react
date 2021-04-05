@@ -1,9 +1,12 @@
 /* eslint-disable no-unused-vars */
 import { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
 
+import * as ROUTES from '../../constants/routes';
+import { withFirebase } from '../Firebase';
 import { INITIAL_STATE } from './config';
 
-class SignUpForm extends Component {
+class SignUpFormBase extends Component {
   constructor(props) {
     super(props);
 
@@ -18,6 +21,7 @@ class SignUpForm extends Component {
       .then((authUser) => {
         console.log(authUser);
         this.setState({ ...INITIAL_STATE });
+        this.props.history.push(ROUTES.HOME);
       })
       .catch((error) => {
         this.setState({ error });
@@ -76,5 +80,7 @@ class SignUpForm extends Component {
     );
   }
 }
+
+const SignUpForm = withRouter(withFirebase(SignUpFormBase));
 
 export default SignUpForm;
