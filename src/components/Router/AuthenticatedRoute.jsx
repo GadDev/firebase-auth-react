@@ -6,7 +6,7 @@ const AuthRoute = ({ component: Component, path, exact, authUser }) => {
   const history = useHistory();
   useEffect(() => {
     if (!authUser) {
-      history.push('/');
+      history.push('/signin');
     }
   }, [history, authUser]);
 
