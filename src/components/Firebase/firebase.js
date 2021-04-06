@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import 'firebase/auth';
+import 'firebase/database';
 
 import app from 'firebase/app';
 
@@ -17,6 +18,7 @@ class Firebase {
     app.initializeApp(config);
 
     this.auth = app.auth();
+    this.db = app.database();
   }
 
   // *** Auth API ***
