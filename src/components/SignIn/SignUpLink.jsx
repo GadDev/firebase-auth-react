@@ -4,7 +4,7 @@ import * as ROUTES from '../../constants/routes';
 
 const SignUpLink = () => (
   <p>
-    Don&apost have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+    Don&rsquo;t have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
   </p>
 );
 
