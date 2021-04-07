@@ -1,7 +1,7 @@
 import { FirebaseContext } from '../Firebase';
 const Home = () => (
-  <div>
-    <h1>Home</h1>
+  <div className="account__wrapper">
+    <h2 className="page-title">Home</h2>
     <FirebaseContext.Consumer>
       {(firebase) => {
         console.log(firebase);

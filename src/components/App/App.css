@@ -5,3 +5,30 @@
   overflow-x: hidden;
   padding: 4.4444444444rem var(--app-container-gutter);
 }
+
+.account__wrapper {
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+
+  padding: var(--app-container-gutter);
+  text-align: center;
+}
+
+h2,
+.page-title {
+  font-family: alternate-gothic-no-1-d, 'Roboto Condensed', 'Helvetica Neue',
+    Helvetica, -apple-system, system-ui, sans-serif;
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 1.3333333333rem;
+  text-transform: uppercase;
+}

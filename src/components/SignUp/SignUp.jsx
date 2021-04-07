@@ -2,8 +2,8 @@
 import SignUpForm from './SignUpForm';
 
 const SignUp = () => (
-  <div>
-    <h1>SignUp</h1>
+  <div className="account__wrapper">
+    <h2 className="page-title">SignUp</h2>
     <SignUpForm />
   </div>
 );

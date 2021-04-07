@@ -1,6 +1,6 @@
 const Landing = () => (
-  <div>
-    <h1>Welcome to Landing</h1>
+  <div className="account__wrapper">
+    <h2 className="page-title">Welcome to Landing</h2>
   </div>
 );
 

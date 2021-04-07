@@ -2,8 +2,8 @@ import PasswordForgetLink from '../PasswordForget/PasswordForgetLink';
 import SignInForm from './SignInForm';
 import SignUpLink from './SignUpLink';
 const SignIn = () => (
-  <div>
-    <h1>SignIn</h1>
+  <div className="account__wrapper">
+    <h2 className="page-title">SignIn</h2>
     <SignInForm />
     <PasswordForgetLink />
     <SignUpLink />

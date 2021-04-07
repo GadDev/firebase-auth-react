@@ -1,6 +1,6 @@
 const Admin = () => (
-  <div>
-    <h1>Admin</h1>
+  <div className="account__wrapper">
+    <h2 className="page-title">Admin</h2>
   </div>
 );
 

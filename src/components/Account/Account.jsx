@@ -4,11 +4,11 @@ import PasswordChangeForm from '../PasswordChange';
 import PasswordForgetForm from '../PasswordForget/PasswordForgetForm';
 
 const AccountPage = () => (
-  <div>
-    <h1>Account Page</h1>
-    <h2>Password Forget</h2>
+  <div className="account__wrapper">
+    <h2 className="page-title">Account Page</h2>
+    <h5>Password Forget</h5>
     <PasswordForgetForm />
-    <h2>Password change</h2>
+    <h5>Password change</h5>
     <PasswordChangeForm />
   </div>
 );
