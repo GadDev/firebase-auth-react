@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';

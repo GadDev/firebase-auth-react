@@ -1,3 +1,5 @@
+import './Navigation.css';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,13 +8,17 @@ import { AuthUserContext } from '../Session';
 import SignOutButton from '../SignOut';
 
 const Navigation = () => (
-  <AuthUserContext.Consumer>
-    {(authUser) => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
-  </AuthUserContext.Consumer>
+  <header role="banner" className="header">
+    <nav className="header__container flex flex--between-center">
+      <AuthUserContext.Consumer>
+        {(authUser) => (authUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+      </AuthUserContext.Consumer>
+    </nav>
+  </header>
 );
 
 const NavigationAuth = () => (
-  <ul>
+  <ul className="header__nav">
     <li>
       <Link to={ROUTES.LANDING}>Landing</Link>
     </li>
@@ -29,7 +35,7 @@ const NavigationAuth = () => (
 );
 
 const NavigationNonAuth = () => (
-  <ul>
+  <ul className="header__nav">
     <li>
       <Link to={ROUTES.LANDING}>Landing</Link>
     </li>

@@ -1,0 +1,7 @@
+.page__wrapper {
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  margin-top: var(--header-height);
+  overflow-x: hidden;
+  padding: 4.4444444444rem var(--app-container-gutter);
+}
