@@ -56,7 +56,7 @@
       "eslint --quiet --fix"
     ],
     "*.{spec,test}.{js,jsx,ts,tsx}": [
-      "react-scripts test --watchAll=false"
+      "npm run test:lint-staged"
     ],
     "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   }

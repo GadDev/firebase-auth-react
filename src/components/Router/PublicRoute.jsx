@@ -5,7 +5,7 @@ const PublicRoute = ({ component: Component, path, exact }) => (
     path={path}
     exact={exact}
     render={(props) => <Component {...props} />}
-  />
+  ></Route>
 );
 
 export default PublicRoute;
