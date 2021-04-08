@@ -1,9 +1,11 @@
 import { Route } from 'react-router-dom';
 
 const PublicRoute = ({ component: Component, path, exact }) => (
-  <Route path={path} exact={exact}>
-    <Component />
-  </Route>
+  <Route
+    path={path}
+    exact={exact}
+    render={(props) => <Component {...props} />}
+  />
 );
 
 export default PublicRoute;
