@@ -41,9 +41,19 @@ class SignUpFormBase extends Component {
     console.log(event);
     this.setState({ [event.target.name]: event.target.value });
   }
+  onChangeCheckbox = (event) => {
+    this.setState({ [event.target.name]: event.target.checked });
+  };
 
   render() {
-    const { username, email, passwordOne, passwordTwo, error } = this.state;
+    const {
+      username,
+      email,
+      passwordOne,
+      passwordTwo,
+      error,
+      isAdmin,
+    } = this.state;
     const isInvalid =
       passwordOne !== passwordTwo ||
       passwordOne === '' ||
@@ -79,6 +89,15 @@ class SignUpFormBase extends Component {
           type="password"
           placeholder="Confirm Password"
         />
+        <label>
+          Admin:
+          <input
+            name="isAdmin"
+            type="checkbox"
+            checked={isAdmin}
+            onChange={(e) => this.onChangeCheckbox(e)}
+          />
+        </label>
         <button disabled={isInvalid} type="submit">
           Sign Up
         </button>
